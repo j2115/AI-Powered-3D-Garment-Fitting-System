@@ -1,0 +1,310 @@
+```
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI搭載 3D服飾フィッティングシステム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .process-step {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        
+        .process-step:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .process-step:nth-child(1):before { content: "1"; }
+        .process-step:nth-child(2):before { content: "2"; }
+        .process-step:nth-child(3):before { content: "3"; }
+        .process-step:nth-child(4):before { content: "4"; }
+        
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg min-h-screen">
+        <!-- ヘッダー -->
+        <header class="py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">AI搭載 3D服飾フィッティングシステム</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+                オンラインの服画像からパーソナルアバターにぴったり合う3D服飾を作成
+            </p>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <!-- 説明セクション -->
+            <section class="mb-20">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-slate-800 mb-4">システムの仕組み</h2>
+                        <p class="text-slate-600 mb-6">
+                            当システムは高度なAI技術を使用して、オンラインショップの服画像を分析し、
+                            3Dメッシュとして再構築、型紙を抽出し、あなたの体型に完璧にフィットさせます。
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="process-step">
+                                <h3 class="text-lg font-medium text-slate-800 mb-2">画像解析</h3>
+                                <p class="text-slate-600">
+                                    AIが服の画像を分析し、種類、素材特性、構造の詳細を識別します。
+                                </p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <h3 class="text-lg font-medium text-slate-800 mb-2">3D再構築</h3>
+                                <p class="text-slate-600">
+                                    システムが服の3Dメッシュモデルを生成し、すべてのデザイン要素とプロポーションを保持します。
+                                </p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <h3 class="text-lg font-medium text-slate-800 mb-2">型紙抽出</h3>
+                                <p class="text-slate-600">
+                                    AIが3D服飾を「展開」し、実際の裁縫で使用するような2Dの型紙を作成します。
+                                </p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <h3 class="text-lg font-medium text-slate-800 mb-2">アバターフィッティング</h3>
+                                <p class="text-slate-600">
+                                    型紙をあなたのアバターの正確な寸法に合わせて調整し、完璧な仮想フィットを実現します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card">
+                        <div class="relative aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="inline-block bg-white p-4 rounded-lg shadow-lg mb-4">
+                                        <div class="flex space-x-4">
+                                            <div class="w-16 h-16 bg-blue-100 rounded-md"></div>
+                                            <div class="w-16 h-16 bg-pink-100 rounded-md"></div>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-slate-500">3D服飾のビジュアライゼーション</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- メリットセクション -->
+            <section class="mb-20">
+                <h2 class="text-2xl font-semibold text-slate-800 mb-8 text-center">主な利点</h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl p-6 card">
+                        <div class="tech-icon mb-4 mx-auto bg-blue-50 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-800 mb-2 text-center">バーチャル試着</h3>
+                        <p class="text-slate-600 text-center">
+                            購入前にアバターで服の見え方を確認でき、返品を減らし満足度を向上させます。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card">
+                        <div class="tech-icon mb-4 mx-auto bg-green-50 text-green-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-800 mb-2 text-center">完璧なフィット</h3>
+                        <p class="text-slate-600 text-center">
+                            服があなたの正確な身体測定値に自動調整され、パーソナライズされた体験を提供します。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 card">
+                        <div class="tech-icon mb-4 mx-auto bg-purple-50 text-purple-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-800 mb-2 text-center">型紙生成</h3>
+                        <p class="text-slate-600 text-center">
+                            実際に服を作りたい場合に、正確な縫製用型紙を取得できます。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技術セクション -->
+            <section class="mb-20">
+                <h2 class="text-2xl font-semibold text-slate-800 mb-8 text-center">技術詳細</h2>
+                
+                <div class="bg-white rounded-xl p-8 card">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-xl font-medium text-slate-800 mb-4">先進的なAI技術</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-slate-600">服飾分析のためのコンピュータビジョン</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-slate-600">3D再構築のための深層学習</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-slate-600">リアルなドレープのための物理ベースシミュレーション</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-slate-600">パラメトリック型紙調整アルゴリズム</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+                            <h4 class="font-medium text-slate-800 mb-3">技術プロセスフロー</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">1</div>
+                                    <span class="text-sm text-slate-600">画像入力処理</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">2</div>
+                                    <span class="text-sm text-slate-600">特徴抽出と分類</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">3</div>
+                                    <span class="text-sm text-slate-600">3Dメッシュ生成</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">4</div>
+                                    <span class="text-sm text-slate-600">型紙展開</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">5</div>
+                                    <span class="text-sm text-slate-600">アバター寸法マッチング</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">6</div>
+                                    <span class="text-sm text-slate-600">最終服飾シミュレーション</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- デモセクション -->
+            <section>
+                <h2 class="text-2xl font-semibold text-slate-800 mb-8 text-center">実際の動作</h2>
+                
+                <div class="bg-white rounded-xl p-6 card">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-xl font-medium text-slate-800 mb-4">画像から完璧なフィットまで</h3>
+                            <p class="text-slate-600 mb-6">
+                                オンラインストアの服画像をアップロードすると、当システムが処理パイプラインを通じて
+                                あなたのアバターにぴったり合う3D服飾を作成します。
+                            </p>
+                            
+                            <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                                    <span class="text-sm font-medium text-slate-800">自分で試す</span>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    近日公開予定！現在は限定パートナーとベータテスト中です。
+                                </p>
+                            </div>
+                            
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-200">
+                                ウェイトリストに登録
+                            </button>
+                        </div>
+                        
+                        <div class="relative aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="inline-block bg-white p-3 rounded-lg shadow-md mb-3">
+                                        <div class="flex space-x-2">
+                                            <div class="w-10 h-10 bg-blue-200 rounded"></div>
+                                            <div class="w-10 h-10 bg-pink-200 rounded"></div>
+                                            <div class="w-10 h-10 bg-green-200 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-slate-500">インタラクティブデモプレビュー</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="bg-white py-8 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto text-center">
+                <p class="text-slate-500">
+                    © 2023 AI服飾フィッティングシステム. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
