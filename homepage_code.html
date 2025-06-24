@@ -1,10 +1,9 @@
-```
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI搭載 3D服飾フィッティングシステム</title>
+    <title>画像解析による3Dメッシュの作成から3Dフィッティングシステム開発</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
@@ -71,9 +70,9 @@
     <div class="gradient-bg min-h-screen">
         <!-- ヘッダー -->
         <header class="py-12 px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">AI搭載 3D服飾フィッティングシステム</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">画像解析による3Dメッシュの作成から3Dフィッティングシステム開発</h1>
             <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-                オンラインの服画像からパーソナルアバターにぴったり合う3D服飾を作成
+                2次元の画像から3DメッシュをAIによって作成し、そのパターン（型紙）からパーソナライズされたアバターに3Dフィッティングできるシステム
             </p>
         </header>
 
@@ -85,27 +84,27 @@
                     <div>
                         <h2 class="text-2xl font-semibold text-slate-800 mb-4">システムの仕組み</h2>
                         <p class="text-slate-600 mb-6">
-                            当システムは高度なAI技術を使用して、オンラインショップの服画像を分析し、
-                            3Dメッシュとして再構築、型紙を抽出し、あなたの体型に完璧にフィットさせます。
+                            当システムは高度なAI技術を使用して、オンラインショップの2次元画像を分析し、
+                            3Dメッシュとして再構築、パターン（型紙）を抽出し、あなたの入力した体型に完璧にフィットさせます。
                         </p>
                         
                         <div class="space-y-6">
                             <div class="process-step">
                                 <h3 class="text-lg font-medium text-slate-800 mb-2">画像解析</h3>
                                 <p class="text-slate-600">
-                                    AIが服の画像を分析し、種類、素材特性、構造の詳細を識別します。
+                                    AIが2次元画像を分析し、種類、素材特性、構造の詳細を識別する
                                 </p>
                             </div>
                             
                             <div class="process-step">
                                 <h3 class="text-lg font-medium text-slate-800 mb-2">3D再構築</h3>
                                 <p class="text-slate-600">
-                                    システムが服の3Dメッシュモデルを生成し、すべてのデザイン要素とプロポーションを保持します。
+                                    分析によってシステムが3Dメッシュモデルを作成し、すべてのデザイン要素とプロポーションを保持する
                                 </p>
                             </div>
                             
                             <div class="process-step">
-                                <h3 class="text-lg font-medium text-slate-800 mb-2">型紙抽出</h3>
+                                <h3 class="text-lg font-medium text-slate-800 mb-2">パターン抽出</h3>
                                 <p class="text-slate-600">
                                     AIが3D服飾を「展開」し、実際の裁縫で使用するような2Dの型紙を作成します。
                                 </p>
@@ -114,7 +113,7 @@
                             <div class="process-step">
                                 <h3 class="text-lg font-medium text-slate-800 mb-2">アバターフィッティング</h3>
                                 <p class="text-slate-600">
-                                    型紙をあなたのアバターの正確な寸法に合わせて調整し、完璧な仮想フィットを実現します。
+                                    型紙をあなたの入力した情報によるアバターに合わせて調整し、完璧なフィッティングを実現する
                                 </p>
                             </div>
                         </div>
@@ -130,7 +129,7 @@
                                             <div class="w-16 h-16 bg-pink-100 rounded-md"></div>
                                         </div>
                                     </div>
-                                    <p class="text-sm text-slate-500">3D服飾のビジュアライゼーション</p>
+                                    <p class="text-sm text-slate-500">3Dフィッティングのビジュアライゼーション</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +139,7 @@
 
             <!-- メリットセクション -->
             <section class="mb-20">
-                <h2 class="text-2xl font-semibold text-slate-800 mb-8 text-center">主な利点</h2>
+                <h2 class="text-2xl font-semibold text-slate-800 mb-8 text-center">このシステムによる効果</h2>
                 
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-white rounded-xl p-6 card">
@@ -151,7 +150,7 @@
                         </div>
                         <h3 class="text-lg font-medium text-slate-800 mb-2 text-center">バーチャル試着</h3>
                         <p class="text-slate-600 text-center">
-                            購入前にアバターで服の見え方を確認でき、返品を減らし満足度を向上させます。
+                            購入前にアバターで服の見え方を確認でき、返品を減らし満足度を向上させる
                         </p>
                     </div>
                     
@@ -163,21 +162,10 @@
                         </div>
                         <h3 class="text-lg font-medium text-slate-800 mb-2 text-center">完璧なフィット</h3>
                         <p class="text-slate-600 text-center">
-                            服があなたの正確な身体測定値に自動調整され、パーソナライズされた体験を提供します。
+                            服があなたの入力した情報によるアバターに自動調整され、パーソナライズされた体験を提供する
                         </p>
                     </div>
                     
-                    <div class="bg-white rounded-xl p-6 card">
-                        <div class="tech-icon mb-4 mx-auto bg-purple-50 text-purple-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-medium text-slate-800 mb-2 text-center">型紙生成</h3>
-                        <p class="text-slate-600 text-center">
-                            実際に服を作りたい場合に、正確な縫製用型紙を取得できます。
-                        </p>
-                    </div>
                 </div>
             </section>
 
@@ -200,7 +188,7 @@
                                     <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
-                                    <span class="text-slate-600">3D再構築のための深層学習</span>
+                                    <span class="text-slate-600">3D再構築のための学習</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -242,7 +230,7 @@
                                 </div>
                                 <div class="flex items-center">
                                     <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">6</div>
-                                    <span class="text-sm text-slate-600">最終服飾シミュレーション</span>
+                                    <span class="text-sm text-slate-600">最終フィッティングシミュレーション</span>
                                 </div>
                             </div>
                         </div>
@@ -301,10 +289,11 @@
         <footer class="bg-white py-8 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto text-center">
                 <p class="text-slate-500">
-                    © 2023 AI服飾フィッティングシステム. All rights reserved.
+                    © 2025 All rights reserved.
                 </p>
             </div>
         </footer>
     </div>
 </body>
 </html>
+
